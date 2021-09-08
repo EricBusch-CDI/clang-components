@@ -11,10 +11,12 @@
 #endif
 
 #ifndef GET_HIGH_BYTE
-#define GET_HIGH_BYTE(_UINT16) ((_UINT16 & 0xff00) >> 8)
+#define GET_HIGH_BYTE(_UINT16) (((_UINT16)&0xff00u) >> 8u)
 
 #endif
-
+#ifndef GET_LOW_BYTE
+#define GET_LOW_BYTE(_UINT16) (((_UINT16)&0x00FF))
+#endif
 //zero an array
 #ifndef zeroArr
 #define zeroArr(arr, size) memset(arr, 0, size)
@@ -56,17 +58,17 @@
 
 #ifndef CHECKFLAG
 #define CHECKFLAG(condition) ( \
-	{                          \
-		if (condition)         \
-		{                      \
-			condition = false; \
-			return true;       \
-		}                      \
-		else                   \
-		{                      \
-			return false;      \
-		}                      \
-	})
+    {                          \
+        if (condition)         \
+        {                      \
+            condition = false; \
+            return true;       \
+        }                      \
+        else                   \
+        {                      \
+            return false;      \
+        }                      \
+    })
 #endif
 
 //get boolean true or false to check if year is leap year
@@ -100,6 +102,11 @@
 
 #ifndef MAKE_U16
 #define MAKE_U16(high_byte, low_byte) (high_byte << 8 | low_byte)
+#endif
+
+#ifndef GENERIC_MAP
+#define GENERIC_MAP(in, out_low, out_high, in_low, in_high) \ 
+((out_high - out_low) / (in_high - in_low) * (in - in_low) + out_low)
 #endif
 
 #endif
