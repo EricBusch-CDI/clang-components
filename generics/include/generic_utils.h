@@ -48,12 +48,12 @@
 
 //get average of two values
 #ifndef average2
-#define average2(x, y) ((double)(x + y) / 2.0)
+#define average2(x, y) ((double)((x) + (y)) / 2.0)
 #endif
 
 //macro to get decimal value of a float up to the given place
 #ifndef getDecimalPlace
-#define getDecimalPlace(f, place) (int)((f - (int)f) * pow(10, place))
+#define getDecimalPlace(f, place) ((int)(((f) - (int)(f)) * pow(10, (place))))
 #endif
 
 #ifndef CHECKFLAG
@@ -72,8 +72,8 @@
 #endif
 
 //get boolean true or false to check if year is leap year
-#ifndef isLeapYear
-#define isLeapYear(year) ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)
+#ifndef IS_LEAP_YEAR
+#define IS_LEAP_YEAR(year) ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)
 #endif
 
 //get max between two numbers
