@@ -1,0 +1,9 @@
+# ninja log v5
+1	308	6535939988022263	CMakeFiles/CTests.dir/main.cpp.obj	bcd69eebc2c8c793
+312	508	6535939989958833	CTests.exe	3babd6f16deee9ea
+0	13	0	clean	6acaa9d0495496a6
+3	202	6535940462562959	build.ninja	5b94b9b6ad5b68b2
+1	274	6535940465495625	CMakeFiles/strlen.dir/main.cpp.obj	9ddafe55e76e022
+274	464	6535940467347319	strlen.exe	d4f348500ee25d2d
+3	276	6535940968153195	CMakeFiles/strlen.dir/main.cpp.obj	9ddafe55e76e022
+276	466	6535940970004880	strlen.exe	d4f348500ee25d2d

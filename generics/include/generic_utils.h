@@ -10,6 +10,15 @@
 #define nullStr(str, size) memset(str, '\0', size)
 #endif
 
+
+#ifndef GET_HIGH_NIBBLE
+#define GET_HIGH_NIBBLE(_UINT8) (((_UINT8) & 0xf0) >> 4)
+#endif
+
+#ifndef GET_LOW_NIBBLE
+#define GET_LOW_NIBBLE(_UINT8) ((_UINT8)  & 0x0fu)
+#endif
+
 #ifndef GET_HIGH_BYTE
 #define GET_HIGH_BYTE(_UINT16) (((_UINT16)&0xff00u) >> 8u)
 
@@ -17,6 +26,11 @@
 #ifndef GET_LOW_BYTE
 #define GET_LOW_BYTE(_UINT16) (((_UINT16)&0x00FF))
 #endif
+
+#ifndef GET_N_BYTE
+#define GET_N_BYTE(num, byte) (((num) >> (8*(byte))) & 0xFF)
+#endif
+
 //zero an array
 #ifndef zeroArr
 #define zeroArr(arr, size) memset(arr, 0, size)
