@@ -123,6 +123,15 @@
     (((out_high) - (out_low)) / ((in_high) - (in_low)) * ((in) - (in_low)) + (out_low))
 #endif
 
+#ifndef IS_EVEN
+#define IS_EVEN(x) (~((x) & 0b1))
+#endif
+
+#ifndef IS_ODD
+#define IS_ODD(x) ((x) & 0b1)
+#endif
+
+
 
 
 #endif
