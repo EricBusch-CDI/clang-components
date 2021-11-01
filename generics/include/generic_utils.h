@@ -50,6 +50,11 @@
 #define ARRAY_SIZE(arr) (sizeof(arr) / (sizeof(arr[0])))
 #endif
 
+// #ifndef ARRAY_SIZE_POW2
+#define ARRAY_SIZE_POW2(arr, bytes) (sizeof(arr) >> bytes)
+// #endif
+
+
 //check to see if a number is hard within the limits
 #ifndef inBounds
 #define inBounds(x, lower, upper) ((lower <= x) && (x <= upper))
