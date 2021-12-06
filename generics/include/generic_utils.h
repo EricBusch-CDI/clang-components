@@ -75,6 +75,10 @@
 #define getDecimalPlace(f, place) ((int)(((f) - (int)(f)) * pow(10, (place))))
 #endif
 
+#ifndef UNUSED
+#define UNUSED(X) ((void)(X))
+#endif
+
 #ifndef CHECKFLAG
 #define CHECKFLAG(condition) ( \
     {                          \
